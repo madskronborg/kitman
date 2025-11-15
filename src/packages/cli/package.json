@@ -1,0 +1,26 @@
+{
+  "name": "@kitman/cli",
+  "description": "Kitman CLI",
+  "version": "0.0.1",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun ./src/index.ts",
+    "build": "bun build ./src/index.ts --compile --bytecode --outfile dist/kitman "
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@clack/prompts": "0.x",
+    "citty": "0.1.x",
+    "consola": "3.x",
+    "ora": "9.x",
+    "std-env": "3.x",
+    "tinyexec": "1.x",
+    "vitest": "4.x"
+  }
+}
