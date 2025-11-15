@@ -1,11 +1,11 @@
 {
-  "name": "@kitman/cli",
+  "name": "kitman",
   "description": "Kitman CLI",
   "version": "0.0.1",
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun ./src/index.ts",
+    "kitman": "bun ./src/index.ts",
     "build": "bun build ./src/index.ts --compile --bytecode --outfile dist/kitman "
   },
   "devDependencies": {
@@ -18,9 +18,9 @@
     "@clack/prompts": "0.x",
     "citty": "0.1.x",
     "consola": "3.x",
-    "ora": "9.x",
     "std-env": "3.x",
-    "tinyexec": "1.x",
-    "vitest": "4.x"
+    "vitest": "4.x",
+    "zod": "4.x",
+    "zx": "^8.8.5"
   }
 }

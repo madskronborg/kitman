@@ -1,5 +1,5 @@
-
-import consola from "consola"
+import process from 'node:process'
+import consola from 'consola'
 
 export function setupGlobalConsole(opts: { dev?: boolean } = {}) {
   // Wrap all console logs with consola for better DX
@@ -10,9 +10,13 @@ export function setupGlobalConsole(opts: { dev?: boolean } = {}) {
     consola.wrapConsole()
   }
 
-  process.on('unhandledRejection', err =>
-    consola.error('[unhandledRejection]', err))
+  process.on('unhandledRejection', (err) => {
+    consola.error('[unhandledRejection]', err)
+    process.exit()
+  })
 
-  process.on('uncaughtException', err =>
-    consola.error('[uncaughtException]', err))
+  process.on('uncaughtException', (err) => {
+    consola.error('[uncaughtException]', err)
+    process.exit()
+  })
 }

@@ -1,3 +1,3 @@
-import {runMain} from "./main"
+import { runMain } from './main'
 
 await runMain()
